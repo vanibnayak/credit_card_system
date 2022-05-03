@@ -52,7 +52,7 @@ public class CreditCardController {
 				log.error("Credit card details are null at create");
 				throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Provide valid credit card details");
 			}
-			if(creditCard==null || Strings.isBlank(creditCard.getCardHolderName()) ) {
+			if( Strings.isBlank(creditCard.getCardHolderName()) ) {
 				log.error("Cardholder name is empty or null at create");
 				throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Provide valid card holder name");
 	
